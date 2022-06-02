@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Google Kalender Import / iOS</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -95,6 +94,52 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 6</div>
+				<img src="ios1.jpg" style="width:100%">
+				<div class="text">1: Nach Klick auf den Link > Abonnieren</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 6</div>
+				<img src="ios2.jpg" style="width:100%">
+				<div class="text">2: Unten die Farbe auswählen, oben auf Hinzufügen</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 6</div>
+				<img src="ios3.jpg" style="width:100%">
+				<div class="text">3: Unten auf Kalender</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 6</div>
+				<img src="ios4.jpg" style="width:100%">
+				<div class="text">4: SV Vitis KM + U23 auswählen</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 6</div>
+				<img src="ios5.jpg" style="width:100%">
+				<div class="text">5: Termine am aktuellen Tag werden angezeigt</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">6 / 6</div>
+				<img src="ios6.jpg" style="width:100%">
+				<div class="text">6: Terminübersicht</div>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"/>
+			<span class="dot" onclick="currentSlide(2)"/>
+			<span class="dot" onclick="currentSlide(3)"/>
+			<span class="dot" onclick="currentSlide(4)"/>
+			<span class="dot" onclick="currentSlide(5)"/>
+			<span class="dot" onclick="currentSlide(6)"/>
+		</div>
 
 <script>
 let slideIndex = 1;
@@ -113,55 +158,17 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex=slides.length} 
-  for (i=0; i < slides.length; i++) { slides[i].style.display="none" ; } 
-  for (i=0; i < dots.length; i++) { dots[i].className=dots[i].className.replace(" active" ,"" ); } 
-  slides[slideIndex-1].style.display="block" ; 
-  dots[slideIndex-1].className +=" active" ; 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
-	</head>
-	<body>
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<div class="numbertext">1 / 3</div>
-				<img src="ios1.jpg" style="width:100%">
-				<div class="text">1: Nach Klick auf den Link > Abonnieren</div>
-			</div>
-			<div class="mySlides fade">
-				<div class="numbertext">2 / 3</div>
-				<img src="ios2.jpg" style="width:100%">
-				<div class="text">2: Unten die Farbe auswählen, oben auf Hinzufügen</div>
-			</div>
-			<div class="mySlides fade">
-				<div class="numbertext">3 / 3</div>
-				<img src="ios3.jpg" style="width:100%">
-				<div class="text">3: Unten auf Kalender</div>
-			</div>
-			<div class="mySlides fade">
-				<div class="numbertext">1 / 3</div>
-				<img src="ios4.jpg" style="width:100%">
-				<div class="text">4: SV Vitis KM + U23 auswählen</div>
-			</div>
-			<div class="mySlides fade">
-				<div class="numbertext">2 / 3</div>
-				<img src="ios2.jpg" style="width:100%">
-				<div class="text">5: Termine am aktuellen Tag werden angezeigt</div>
-			</div>
-			<div class="mySlides fade">
-				<div class="numbertext">3 / 3</div>
-				<img src="ios3.jpg" style="width:100%">
-				<div class="text">6: Terminübersicht</div>
-			</div>
-			<a class="prev" onclick="plusSlides(-1)">❮</a>
-			<a class="next" onclick="plusSlides(1)">❯</a>
-		</div>
-		<br>
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"/>
-			<span class="dot" onclick="currentSlide(2)"/>
-			<span class="dot" onclick="currentSlide(3)"/>
-		</div>
-	</body>
+</body>
 </html> 
